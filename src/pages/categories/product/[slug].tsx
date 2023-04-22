@@ -40,7 +40,7 @@ const Product = () => {
 
   return (
     <Layout>
-      <main className="h-auto min-h-full w-full p-8">
+      <main className="h-fit min-h-full w-full p-8">
         {product && image ? (
           <>
             <div className="flex flex-row max-lg:flex-col gap-8">
@@ -51,7 +51,7 @@ const Product = () => {
                     alt={product.description}
                     width={image.width}
                     height={image.height}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover max-h-[20rem]"
                   ></Image>
                 </div>
                 <div className="flex flex-row gap-4">
