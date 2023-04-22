@@ -23,7 +23,7 @@ const UserDropDown: React.FC = () => {
         </svg>
       </Menu.Button>
       <Menu.Items className="flex flex-col absolute w-36 right-0 mt-1 text-lg z-10 bg-white border-[1px] border-gray-200 rounded-lg">
-        {/* <Menu.Item>
+        <Menu.Item>
           {({ active }) => (
             <Link
               href="/user"
@@ -32,7 +32,7 @@ const UserDropDown: React.FC = () => {
               Order History
             </Link>
           )}
-        </Menu.Item> */}
+        </Menu.Item>
         <Menu.Item>
           {({ active }) => (
             <button

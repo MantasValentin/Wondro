@@ -18,52 +18,39 @@ interface Order {
     postalCode: string;
     country: string;
   };
-  order: {
-    id: number;
-    category: string;
-    img: StaticImageData;
-    description: string;
-    price: number;
-    otherImgs: StaticImageData[];
-    specs: string;
-    texture: string;
-    weight: string;
-    size: string;
-    quantity: number;
-    purchaseId: number;
-  }[];
+  order: any;
 }
 
 const UserProfile: React.FC = () => {
-  // const [user, loading, error] = useAuthState(auth);
-  // const [data, setData] = useState<Order[]>();
-  // const router = useRouter();
+  const [user, loading, error] = useAuthState(auth);
+  const [data, setData] = useState<Order[]>();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   if (user) {
-  //   } else {
-  //     router.push("/");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+    } else {
+      router.push("/");
+    }
+  }, [user]);
 
-  // useEffect(() => {
-  //   const db = getDatabase();
-  //   const starCountRef = ref(db, "users/" + user?.uid);
-  //   onValue(starCountRef, (snapshot) => {
-  //     if (snapshot.val()) {
-  //       const myData: Order[] = Object.keys(snapshot.val()).map((key: any) => {
-  //         return snapshot.val()[key];
-  //       });
-  //       setData(myData);
-  //       console.log(myData);
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    const db = getDatabase();
+    const starCountRef = ref(db, "users/" + user?.uid);
+    onValue(starCountRef, (snapshot) => {
+      if (snapshot.val()) {
+        const myData: Order[] = Object.keys(snapshot.val()).map((key: any) => {
+          return snapshot.val()[key];
+        });
+        setData(myData);
+        console.log(myData);
+      }
+    });
+  }, []);
 
   return (
     <Layout>
       <main className="flex flex-col min-h-full h-fit px-40 py-6 max-xl:p-6 gap-8">
-        {/* <div className="text-2xl font-semibold">Order History</div>
+        <div className="text-2xl font-semibold">Order History</div>
         <div className="flex flex-col flex-wrap max-sm:flex-row gap-1">
           <div className="flex flex-row max-sm:flex-col text-xl max-sm:text-lg font-semibold p-1">
             <div className="flex items-center justify-center max-sm:justify-start basis-1/5">
@@ -106,7 +93,7 @@ const UserProfile: React.FC = () => {
               </div>
             );
           })}
-        </div> */}
+        </div>
       </main>
     </Layout>
   );
