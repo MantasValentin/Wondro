@@ -1,5 +1,5 @@
 # Wondro Ecommerce
-This is a non-functional ecommerce website for my personal portfolio
+This is a non-functional ecommerce website for my personal portfolio, using firebase for authentication and data storage
 
 ## Getting Started
 To get all the packages.
