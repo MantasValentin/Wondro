@@ -28,6 +28,9 @@ function reducer(state, action) {
       );
       return { ...state, cart: { ...state.cart, cartItems } };
     }
+    case "CART_DELETE_ALL": {
+      return { ...initialState };
+    }
     case "SAVE_SHIPPING_ADDRESS":
       return {
         ...state,

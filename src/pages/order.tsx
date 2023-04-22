@@ -59,6 +59,10 @@ const Order: React.FC = () => {
 
   const placeOrder = () => {
     writeUserData();
+    dispatch({
+      type: "CART_DELETE_ALL",
+      payload: {},
+    });
     router.push("/");
   };
 
