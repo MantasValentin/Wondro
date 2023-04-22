@@ -11,11 +11,8 @@ const OAuthButtons: React.FC = () => {
   return (
     <>
       <button
-        className="flex flex-row border items-center justify-center border-gray-300 bg-white hover:bg-gray-100 rounded-full shadow-sm px-3 py-2 text-xl text-center gap-2"
-        onClick={(e) => {
-          e.preventDefault();
-          signInWithGoogle();
-        }}
+        className="flex flex-row border items-center justify-center border-gray-300 bg-white hover:bg-gray-900 hover:text-white rounded-full shadow-sm px-3 py-2 text-xl text-center gap-2"
+        onClick={() => signInWithGoogle()}
       >
         <FcGoogle className="text-3xl" />
         Continue with Google

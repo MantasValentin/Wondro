@@ -26,14 +26,14 @@ const Reset: React.FC<props> = ({ modalState, setModalState }) => {
     <>
       <div className="flex flex-col">
         <button
-          className="text-gray-700 hover:bg-gray-200 text-right rounded-t-md pr-2"
+          className="text-gray-700 hover:bg-gray-900 hover:text-white text-right rounded-t-md pr-2 h-[54px]"
           onClick={() => {
             setModalState({ ...modalState, show: false });
           }}
         >
           <span className="text-xl">X</span>
         </button>
-        <div className="pb-6 px-6 flex flex-col gap-2">
+        <div className="py-6 px-6 flex flex-col gap-2">
           <h2 className="text-xl text-center">Reset Password</h2>
 
           {success ? (
@@ -45,7 +45,7 @@ const Reset: React.FC<props> = ({ modalState, setModalState }) => {
                 you a reset link
               </p>
               <form onSubmit={onSubmit}>
-                <label className="flex flex-col pb-2">
+                <label className="flex flex-col pb-6">
                   <input
                     className="border border-gray-300 rounded-md shadow-sm opacity-70 focus:outline-none focus:opacity-100 hover:opacity-100 py-1 px-2"
                     type="email"
@@ -59,7 +59,7 @@ const Reset: React.FC<props> = ({ modalState, setModalState }) => {
                   />
                 </label>
                 <div className="flex justify-center w-full">
-                  <button className="flex-1 max-w-[10rem] border border-gray-300 rounded-full shadow-sm px-3 py-2 hover:bg-gray-100 text-lg">
+                  <button className="flex-1 max-w-[10rem] border border-gray-300 rounded-full shadow-sm px-3 py-2 hover:bg-gray-900 hover:text-white text-lg">
                     Confirm
                   </button>
                 </div>
