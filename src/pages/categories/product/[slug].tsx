@@ -51,7 +51,7 @@ const Product = () => {
                     alt={product.description}
                     width={image.width}
                     height={image.height}
-                    className="w-full h-full object-cover max-lg:max-h-[40rem] max-md:max-h-[22rem]  max-xs:max-h-[14rem]"
+                    className="w-full h-full object-cover max-2xl:max-h-[20rem] max-lg:max-h-[40rem] max-md:max-h-[22rem]  max-xs:max-h-[14rem]"
                   ></Image>
                 </div>
                 <div className="flex flex-row gap-4">
