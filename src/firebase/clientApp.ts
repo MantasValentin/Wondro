@@ -20,8 +20,6 @@ const firebaseConfig = {
     "https://coding-palace-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
-console.log(firebaseConfig.apiKey, firebaseConfig.authDomain);
-
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
