@@ -51,11 +51,12 @@ const Product = () => {
                     alt={product.description}
                     width={image.width}
                     height={image.height}
-                    className="w-full h-full object-cover max-lg:max-h-[40rem] max-md:max-h-[22rem]  max-xs:max-h-[14rem]"
+                    // className="w-full h-full object-cover max-[2560px]:h-[474px] max-xl:max-h-[40rem] max-xl:h-auto max-md:max-h-[26rem] max-xs:max-h-[22rem]"
+                    className="w-full h-full object-cover max-[2560px]:h-[474px] max-lg:h-[60rem] max-md:h-[40rem] max-sm:h-[30rem] max-xs:h-[24rem]"
                   ></Image>
                 </div>
                 <div className="flex flex-row gap-4">
-                  <div className="relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
+                  <div className="basis-1/3 relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
                     <Image
                       src={product.img.src}
                       alt={product.description}
@@ -65,7 +66,7 @@ const Product = () => {
                       onMouseOver={() => setImage(product.img)}
                     ></Image>
                   </div>
-                  <div className="relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
+                  <div className="basis-1/3 relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
                     <Image
                       src={product.otherImgs[0].src}
                       alt={product.description}
@@ -75,7 +76,7 @@ const Product = () => {
                       onMouseOver={() => setImage(product.otherImgs[0])}
                     ></Image>
                   </div>
-                  <div className="relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
+                  <div className="basis-1/3 relative border-2 border-black border-opacity-30 transition duration-300 hover:border-opacity-70">
                     <Image
                       src={product.otherImgs[1].src}
                       alt={product.description}
@@ -87,7 +88,7 @@ const Product = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col basis-2/3">
+              <div className="flex flex-col basis-2/3 h-min">
                 <div className="flex flex-col h-fit bg-gray-200 p-8 gap-8 max-sm:gap-4">
                   <div className="text-center text-3xl max-sm:text-xl font-semibold">
                     {product.description}
