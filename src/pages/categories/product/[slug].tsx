@@ -51,8 +51,7 @@ const Product = () => {
                     alt={product.description}
                     width={image.width}
                     height={image.height}
-                    // className="w-full h-full object-cover max-[2560px]:h-[474px] max-xl:max-h-[40rem] max-xl:h-auto max-md:max-h-[26rem] max-xs:max-h-[22rem]"
-                    className="w-full h-full object-cover max-[2560px]:h-[474px] max-lg:h-[60rem] max-md:h-[40rem] max-sm:h-[30rem] max-xs:h-[24rem]"
+                    className="w-full h-full object-cover max-[2560px]:h-[500px] max-lg:h-[60rem] max-md:h-[40rem] max-sm:h-[32rem] max-xs:h-[24rem]"
                   ></Image>
                 </div>
                 <div className="flex flex-row gap-4">
