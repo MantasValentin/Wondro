@@ -36,6 +36,7 @@ export default function Cart() {
     0
   );
 
+  // removes item from the cart
   const removeItem = (item: Item) => {
     dispatch({
       type: "CART_REMOVE_ITEM",
@@ -43,6 +44,7 @@ export default function Cart() {
     });
   };
 
+  // forces user to log in if they want to purchase items
   const purchase = () => {
     if (user) {
       router.push("/shipping");

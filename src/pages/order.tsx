@@ -36,6 +36,7 @@ const Order: React.FC = () => {
   const totalPrice =
     itemPrice + Math.round(itemPrice * 0.15) + (itemPrice > 200 ? 0 : 15);
 
+  // if user logs out then they are sent to the start page
   useEffect(() => {
     if (user) {
     } else {
@@ -57,6 +58,7 @@ const Order: React.FC = () => {
     });
   };
 
+  // adds the order to the database and deletes all data in the cart
   const placeOrder = () => {
     writeUserData();
     dispatch({

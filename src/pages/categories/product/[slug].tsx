@@ -20,6 +20,7 @@ const Product = () => {
   const [image, setImage] = useState(product?.img);
   const [quantity, setQuantity] = useState(0);
 
+  // add item to the cart
   const addToCartHandler = () => {
     if (quantity > 0) {
       const d = new Date();
@@ -30,6 +31,7 @@ const Product = () => {
     }
   };
 
+  // forces user to log in if they want to purchase items
   const purchase = () => {
     if (user) {
       router.push("/shipping");

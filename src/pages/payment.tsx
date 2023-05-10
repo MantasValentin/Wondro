@@ -11,6 +11,7 @@ const Payment: React.FC = () => {
   const [paymentMethod, setPaymentMethod] = useState("");
   const router = useRouter();
 
+  // if user logs out then they are sent to the start page
   useEffect(() => {
     if (user) {
     } else {
@@ -26,7 +27,6 @@ const Payment: React.FC = () => {
 
   const onChange = (e: any) => {
     setPaymentMethod(e.target.value);
-    console.log(paymentMethod);
   };
 
   return (

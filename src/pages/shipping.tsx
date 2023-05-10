@@ -17,6 +17,7 @@ const Shipping: React.FC = () => {
     country: "",
   });
 
+  // if user logs out then they are sent to the start page\
   useEffect(() => {
     if (user) {
     } else {

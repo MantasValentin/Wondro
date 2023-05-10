@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import React, { useState, useEffect } from "react";
 import { getDatabase, onValue, ref } from "firebase/database";
-import { StaticImageData } from "next/image";
 
 interface Order {
   date: string;
@@ -26,6 +25,7 @@ const UserProfile: React.FC = () => {
   const [data, setData] = useState<Order[]>();
   const router = useRouter();
 
+  // if user logs out then they are sent to the start page
   useEffect(() => {
     if (user) {
     } else {
@@ -33,16 +33,17 @@ const UserProfile: React.FC = () => {
     }
   }, [user]);
 
+  // gets the users order history
   useEffect(() => {
     const db = getDatabase();
-    const starCountRef = ref(db, "users/" + user?.uid);
-    onValue(starCountRef, (snapshot) => {
+    const userData = ref(db, "users/" + user?.uid);
+    onValue(userData, (snapshot) => {
       if (snapshot.val()) {
+        // converts the objects into an array to map and display
         const myData: Order[] = Object.keys(snapshot.val()).map((key: any) => {
           return snapshot.val()[key];
         });
         setData(myData);
-        console.log(myData);
       }
     });
   }, []);
