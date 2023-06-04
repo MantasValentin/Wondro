@@ -9,7 +9,7 @@ const Layout = (props: PropsWithChildren) => {
   return (
     <>
       <Head>
-        <title>{title ? title + " - Wondro" : "Wondro"}</title>
+        <title>{"Wondro"}</title>
         <meta name="description" content="Ecommerce Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
