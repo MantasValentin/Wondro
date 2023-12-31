@@ -17,7 +17,7 @@ const CategoriesHeader = () => {
               alt="Skin Care"
               width={img2.width}
               height={img2.height}
-              className="w-full h-full object-cover transition hover:cursor-pointer"
+              className="w-full h-full object-cover transition duration-300 hover:shadow-sm hover:opacity-70 hover:cursor-pointer"
             />
             <div className="absolute top-0 w-full h-full bg-black bg-opacity-20 transition duration-300 hover:bg-opacity-10" />
           </Link>

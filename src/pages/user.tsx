@@ -31,7 +31,7 @@ const UserProfile: React.FC = () => {
     } else {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   // gets the users order history
   useEffect(() => {

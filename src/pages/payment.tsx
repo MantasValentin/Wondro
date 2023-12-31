@@ -17,7 +17,7 @@ const Payment: React.FC = () => {
     } else {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

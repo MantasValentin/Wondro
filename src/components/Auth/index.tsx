@@ -21,7 +21,7 @@ const Modal: React.FC<props> = ({ modalState, setModalState }) => {
     if (user) {
       setModalState({ ...modalState, show: false });
     }
-  }, [user]);
+  }, [user, setModalState, modalState]);
 
   return (
     <>

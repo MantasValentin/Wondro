@@ -42,7 +42,7 @@ const Order: React.FC = () => {
     } else {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   const writeUserData = () => {
     const db = getDatabase();
